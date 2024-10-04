@@ -1,0 +1,1 @@
+typedef SearchListArgs = ({String value,bool isCategory});
