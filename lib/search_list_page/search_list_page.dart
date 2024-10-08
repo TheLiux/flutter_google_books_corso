@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_google_books/common/extensions/list_extensions.dart';
 import 'package:flutter_google_books/common/client/client.dart';
@@ -8,12 +9,15 @@ import 'package:flutter_google_books/common/widgets/error_widget.dart';
 import 'package:flutter_google_books/search_list_page/widgets/book_list_tile.dart';
 
 class SearchListPage extends StatelessWidget {
-  const SearchListPage({super.key});
+  final SearchListArgs args;
+
+  const SearchListPage({
+    super.key,
+    required this.args,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as SearchListArgs;
-
     return Scaffold(
       appBar: const CustomAppBar(
         title: 'Search Page',

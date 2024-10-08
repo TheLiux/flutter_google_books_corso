@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_google_books/common/extensions/list_extensions.dart';
 import 'package:flutter_google_books/book_details/widgets/favourite_icon.dart';
-import 'package:flutter_google_books/common/local_storage.dart';
-import 'package:flutter_google_books/common/models/industry_identifiers.dart';
+import 'package:flutter_google_books/common/firebase_storage.dart';
 import 'package:flutter_google_books/common/models/volume_info.dart';
 import 'package:flutter_google_books/common/widgets/book_image_widget.dart';
 
 class CardBookDetail extends StatelessWidget {
   final VolumeInfo volumeInfo;
-  final LocalStorage _localStorage;
+  final FirebaseStorage _localStorage;
 
   final textStyle = const TextStyle(
     overflow: TextOverflow.ellipsis,

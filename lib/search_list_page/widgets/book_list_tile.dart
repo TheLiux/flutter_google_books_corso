@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_google_books/common/models/volume_info.dart';
 import 'package:flutter_google_books/common/widgets/book_image_widget.dart';
+import 'package:go_router/go_router.dart';
 
 class BookListTile extends StatelessWidget {
   final VolumeInfo volumeInfo;
@@ -75,6 +76,7 @@ class BookListTile extends StatelessWidget {
   }
 
   void _navigateToBookDetails(BuildContext context, VolumeInfo value) {
-    Navigator.of(context).pushNamed('/book_details', arguments: value);
+
+    context.push('/book_details', extra: value);
   }
 }

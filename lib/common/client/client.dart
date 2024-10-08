@@ -11,7 +11,7 @@ class Client {
 
   static String apiKey() => dotenv.env['API_KEY'] ?? '';
 
-  static String _genericError = "Errore generico!";
+  static const String _genericError = "Errore generico!";
 
   Future<Result?> searchByValue(String value) async {
     try {

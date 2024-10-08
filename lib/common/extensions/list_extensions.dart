@@ -10,7 +10,7 @@ extension ListExtensions on List? {
 
 extension ListX on List<IndustryIdentifiers> {
   int get hashList {
-    final hash = this.fold(0, (prev, curr) => prev + curr.hashCode);
+    final hash = fold(0, (prev, curr) => prev + curr.hashCode);
 
     return hash;
   }

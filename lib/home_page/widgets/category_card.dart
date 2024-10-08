@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_google_books/common/models/category.dart';
-import 'package:flutter_google_books/common/typedef/search_list_args.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
@@ -30,8 +30,8 @@ class CategoryCard extends StatelessWidget {
   }
 
   void _navigateToSearchPage(BuildContext context, String value) {
-    final SearchListArgs args = (value: value, isCategory: true);
+    final  args = (value: value, isCategory: true);
 
-    Navigator.of(context).pushNamed('/search_list_page', arguments: args);
+    context.push('/search_list_page', extra: args);
   }
 }
